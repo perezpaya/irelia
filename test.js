@@ -1,4 +1,4 @@
-var Lollib = require('./lollib.js');
+var Lollib = require('./lib/main.js');
 
 var lol = new Lollib({
 	endpoint: 'http://prod.api.pvp.net/api/lol/',
@@ -6,11 +6,11 @@ var lol = new Lollib({
 	debug: true
 });
 
-lol.getSummonerByName('euw', 'NSZombie', function (err, res){
+/*lol.getSummonerByName('euw', 'NSZombie', function (err, res){
 
 	console.log(err, res);
 
-});
+});*/
 
 /*lol.getChampions('euw', true, function (err, res) {
 
@@ -22,6 +22,27 @@ lol.getSummonerByName('euw', 'NSZombie', function (err, res){
 	console.log(err, res);
 });*/
 
-/*lol.getSummaryStatsBySummonerId('euw', 33682129, 'SEASON3', function (err, res) {
+lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
 	console.log(err, res);
-});*/
+});
+
+
+/*
+
+GET IMAGES AND OBJECT DATA
+
+This isn't part of the API, but you can already retrieve JSON-formatted item and champion data. 
+
+This link, for example, returns all items and their statistics in english for the current patch: 
+http://ddragon.leagueoflegends.com/cdn/3.14.41/data/en_US/item.json 
+
+There are a number of others for static data, such as champion.json, mastery.json, and rune.json. 
+
+If you want more information for a specific champion (and maybe items, but I haven't checked), you can do so: 
+http://ddragon.leagueoflegends.com/cdn/3.14.41/data/en_US/champion/Ahri.json 
+
+Instead of hardcoding version numbers, I recommend getting the latest from this file (and other regions): 
+http://ddragon.leagueoflegends.com/realms/na.json
+
+
+*/
