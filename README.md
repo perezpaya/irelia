@@ -26,6 +26,11 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 	console.log(err, res);
 });
 ```
+### Constants
+
+irelia.regions['euw'] -> returns: *String* 'Europe West'
+
+
 
 ### Methods
 
@@ -36,14 +41,14 @@ irelia.getChampions('euw', true, function (err, champions){
 });
 ```
 
-- getChampions(region, freeToPlay[optional], callback);
-- getRecentGamesBySummonerId(region, summonerId, callback);
-- getLeagueBySummonerId(region, summonerId, callback);
-- getSummaryStatsBySummonerId(region, summonerId, season [optional], callback);
-- getRankedStatsBySummonerId(region, summonerId, season [optional], callback);
-- getMasteriesBySummonerId(region, summonerId, callback);
-- getRunesBySummonerId(region, summonerId, callback);
-- getSummonerByName(region, name, callback);
-- getSummonerBySummonerId(region, summonerId, callback);
-- getNamesBySummonerIds(region, summonerIds[Array list], callback);
-- getTeamsBySummonerId(region, summonerId, callback);
+- irelia.getChampions(region, freeToPlay[optional], callback);
+- irelia.getRecentGamesBySummonerId(region, summonerId, callback);
+- irelia.getLeagueBySummonerId(region, summonerId, callback);
+- irelia.getSummaryStatsBySummonerId(region, summonerId, season [optional], callback);
+- irelia.getRankedStatsBySummonerId(region, summonerId, season [optional], callback);
+- irelia.getMasteriesBySummonerId(region, summonerId, callback);
+- irelia.getRunesBySummonerId(region, summonerId, callback);
+- irelia.getSummonerByName(region, name, callback);
+- irelia.getSummonerBySummonerId(region, summonerId, callback);
+- irelia.getNamesBySummonerIds(region, summonerIds[Array list], callback);
+- irelia.getTeamsBySummonerId(region, summonerId, callback);
