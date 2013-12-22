@@ -28,9 +28,10 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 ```
 ### Constants
 
-irelia.regions['euw'] -> returns: *String* 'Europe West'
-
-
+- lol.regions['euw'] -> ***'Europe West'***
+- lol.queues[2] -> ***'Normal 5v5 Blind Pick'***
+- lol.gametypes['CUSTOM_GAME'] -> ***'Custom game'***
+- lol.gamemode['CLASSIC'] -> ***'Summoner's Rift/Twisted Treeline game'***
 
 ### Methods
 

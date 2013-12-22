@@ -22,9 +22,13 @@ var lol = new Lollib({
 	console.log(err, res);
 });*/
 
-lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
+/*lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
 	console.log(err, res);
-});
+});*/
+console.log(lol.regions['euw']);
+console.log(lol.queues[2]);
+console.log(lol.gametypes['CUSTOM_GAME']);
+console.log(lol.gamemode['CLASSIC']);
 
 
 /*
