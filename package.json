@@ -2,7 +2,7 @@
   "author": "Alejandro Perezpayá",
   "name": "irelia",
   "description": "Node.js League of Legends API Wrapper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "url": "https://github.com/alexperezpaya/irelia"
   },

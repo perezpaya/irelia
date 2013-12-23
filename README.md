@@ -26,6 +26,35 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 	console.log(err, res);
 });
 ```
+
+### Errors
+
+```javascript
+var Irelia = require('irelia');
+var irelia = new Irelia({
+	endpoint: 'http://prod.api.pvp.net/api/lol/',
+	key: 'your_key_goes_here',
+	debug: true
+});
+irelia.getSummonerByName('euw', 'NSZombie', function (err, summoner){
+	if(err){
+		if(err.status){
+			if(err.status.code == 429){
+				console.log(err.status.message);
+			} else if(err.status.code == 404){
+				console.log(err.status.message);
+			} else if(err.status.code == 500){
+				console.log(err.status.message);
+			} else {
+				console.log('Unknown error code');
+			}
+		} else {
+			console.log(summoner.id);
+		}
+	}
+});
+```
+
 ### Constants
 
 - lol.regions['euw'] -> ***'Europe West'***
