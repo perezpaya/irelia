@@ -49,8 +49,10 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, summoner){
 				console.log('Unknown error code');
 			}
 		} else {
-			console.log(summoner.id);
+			console.log(err); // Non http error
 		}
+	} else {
+		console.log(summoner);
 	}
 });
 ```
