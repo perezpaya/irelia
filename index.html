@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Irelia : Node.js League of Legends API Wrapper" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Irelia</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/alexperezpaya/irelia">View on GitHub</a>
+
+          <h1 id="project_title">Irelia</h1>
+          <h2 id="project_tagline">Node.js League of Legends API Wrapper</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/alexperezpaya/irelia/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/alexperezpaya/irelia/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="irelia" class="anchor" href="#irelia"><span class="octicon octicon-link"></span></a>Irelia</h1>
+
+<h1></h1>
+
+<p>Irelia is a Node.js Wrapper that will allow you to start coding easily with the <a href="http://developer.riotgames.com">League of Legends Oficial API</a>.</p>
+
+<p>Get your API Key at <a href="http://developer.riotgames.com">http://developer.riotgames.com</a></p>
+
+<p>There are API limits right now, so use the API with caching with Redis, Memcache, etc.</p>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<pre><code>npm install irelia
+</code></pre>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">Irelia</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'irelia'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">irelia</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Irelia</span><span class="p">({</span>
+    <span class="nx">endpoint</span><span class="o">:</span> <span class="s1">'http://prod.api.pvp.net/api/lol/'</span><span class="p">,</span>
+    <span class="nx">key</span><span class="o">:</span> <span class="s1">'your_key_goes_here'</span><span class="p">,</span>
+    <span class="nx">debug</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+<span class="nx">irelia</span><span class="p">.</span><span class="nx">getSummonerByName</span><span class="p">(</span><span class="s1">'euw'</span><span class="p">,</span> <span class="s1">'NSZombie'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="errors" class="anchor" href="#errors"><span class="octicon octicon-link"></span></a>Errors</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">Irelia</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'irelia'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">irelia</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Irelia</span><span class="p">({</span>
+    <span class="nx">endpoint</span><span class="o">:</span> <span class="s1">'http://prod.api.pvp.net/api/lol/'</span><span class="p">,</span>
+    <span class="nx">key</span><span class="o">:</span> <span class="s1">'your_key_goes_here'</span><span class="p">,</span>
+    <span class="nx">debug</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+<span class="nx">irelia</span><span class="p">.</span><span class="nx">getSummonerByName</span><span class="p">(</span><span class="s1">'euw'</span><span class="p">,</span> <span class="s1">'NSZombie'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">summoner</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">code</span> <span class="o">==</span> <span class="mi">429</span><span class="p">){</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">){</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">code</span> <span class="o">==</span> <span class="mi">500</span><span class="p">){</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Unknown error code'</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// Non http error</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">summoner</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="constants" class="anchor" href="#constants"><span class="octicon octicon-link"></span></a>Constants</h3>
+
+<ul>
+<li>lol.regions['euw'] -&gt; <strong><em>'Europe West'</em></strong>
+</li>
+<li>lol.queues[2] -&gt; <strong><em>'Normal 5v5 Blind Pick'</em></strong>
+</li>
+<li>lol.gametypes['CUSTOM_GAME'] -&gt; <strong><em>'Custom game'</em></strong>
+</li>
+<li>lol.gamemode['CLASSIC'] -&gt; <strong><em>'Summoner's Rift/Twisted Treeline game'</em></strong>
+</li>
+</ul><h3>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<p>Callbacks - Response is given asyncronly using callbacks.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">irelia</span><span class="p">.</span><span class="nx">getChampions</span><span class="p">(</span><span class="s1">'euw'</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">champions</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">champions</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<ul>
+<li>irelia.getChampions(region, freeToPlay[optional], callback);</li>
+<li>irelia.getRecentGamesBySummonerId(region, summonerId, callback);</li>
+<li>irelia.getLeagueBySummonerId(region, summonerId, callback);</li>
+<li>irelia.getSummaryStatsBySummonerId(region, summonerId, season [optional], callback);</li>
+<li>irelia.getRankedStatsBySummonerId(region, summonerId, season [optional], callback);</li>
+<li>irelia.getMasteriesBySummonerId(region, summonerId, callback);</li>
+<li>irelia.getRunesBySummonerId(region, summonerId, callback);</li>
+<li>irelia.getSummonerByName(region, name, callback);</li>
+<li>irelia.getSummonerBySummonerId(region, summonerId, callback);</li>
+<li>irelia.getNamesBySummonerIds(region, summonerIds[Array list], callback);</li>
+<li>irelia.getTeamsBySummonerId(region, summonerId, callback);</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Irelia maintained by <a href="https://github.com/alexperezpaya">alexperezpaya</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
