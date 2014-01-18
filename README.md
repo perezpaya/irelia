@@ -1,6 +1,5 @@
 #Irelia
 ======
-
 Irelia is a Node.js Wrapper that will allow you to start coding easily with the [League of Legends Oficial API](http://developer.riotgames.com).
 
 Get your API Key at [http://developer.riotgames.com](http://developer.riotgames.com)
