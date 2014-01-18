@@ -6,25 +6,25 @@ var lol = new Lollib({
 	debug: true
 });
 
-/*lol.getSummonerByName('euw', 'NSZombie', function (err, res){
+lol.getSummonerByName('euw', 'NSZombie', function (err, res){
 
 	console.log(err, res);
 
-});*/
+});
 
-/*lol.getChampions('euw', true, function (err, res) {
+lol.getChampions('euw', true, function (err, res) {
 
 	console.log(err, res);
 
-});*/
+});
 
-/*lol.getRecentGamesBySummonerId('euw', 33682129, function (err, res) {
+lol.getRecentGamesBySummonerId('euw', 33682129, function (err, res) {
 	console.log(err, res);
-});*/
+});
 
-/*lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
+lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
 	console.log(err, res);
-});*/
+});
 console.log(lol.regions['euw']);
 console.log(lol.queues[2]);
 console.log(lol.gametypes['CUSTOM_GAME']);
