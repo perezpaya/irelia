@@ -2,7 +2,7 @@ var Lollib = require('./lib/main.js');
 
 var lol = new Lollib({
 	endpoint: 'http://prod.api.pvp.net/api/lol/',
-	key: 'your_key_goes_here',
+	key: 'ddad33ef-e7a4-4d99-8af8-aa8bf5260db0', // TEST API KEY -> Better get your own cause if not rate limit will be exceeded all time
 	debug: true
 });
 
