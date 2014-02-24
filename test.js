@@ -1,16 +1,19 @@
 var Lollib = require('./lib/main.js');
 
 var lol = new Lollib({
-	endpoint: 'http://prod.api.pvp.net/api/lol/',
+	secure: true,
+	host: 'prod.api.pvp.net',
+	path: '/api/lol/',
 	key: 'ddad33ef-e7a4-4d99-8af8-aa8bf5260db0', // TEST API KEY -> Better get your own cause if not rate limit will be exceeded all time
 	debug: true
 });
 
-lol.getSummonerByName('euw', 'NSZombie', function (err, res){
+/*lol.getSummonerByName('euw', 'NSZombie', function (err, res){
 
 	console.log(err, res);
 
 });
+*/
 
 lol.getChampions('euw', true, function (err, res) {
 
@@ -25,11 +28,12 @@ lol.getRecentGamesBySummonerId('euw', 33682129, function (err, res) {
 lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
 	console.log(err, res);
 });
+/*
 console.log(lol.regions['euw']);
 console.log(lol.queues[2]);
 console.log(lol.gametypes['CUSTOM_GAME']);
 console.log(lol.gamemode['CLASSIC']);
-
+*/
 
 /*
 

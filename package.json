@@ -3,13 +3,14 @@
   "name": "irelia",
   "description": "Node.js League of Legends API Wrapper",
   "keywords": ["wrapper", "League of Legends", "api", "riot", "irelia", "async", "lol", "node-lol", "league", "of", "legends"],
-  "version": "0.1.6",
+  "version": "0.2.1",
   "repository": {
     "url": "https://github.com/alexperezpaya/irelia"
   },
   "main": "./lib/main.js",
   "dependencies": {
-    "request": "*"
+    "request": "*",
+    "colors": "*"
   },
   "engines": {
     "node": "*"

@@ -20,7 +20,9 @@ npm install irelia
 ```javascript
 var Irelia = require('irelia');
 var irelia = new Irelia({
-	endpoint: 'http://prod.api.pvp.net/api/lol/',
+	secure: true,
+	host: 'prod.api.pvp.net',
+	path: '/api/lol/'
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -34,7 +36,9 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 ```javascript
 var Irelia = require('irelia');
 var irelia = new Irelia({
-	endpoint: 'http://prod.api.pvp.net/api/lol/',
+	secure: true,
+	host: 'prod.api.pvp.net',
+	path: '/api/lol/'
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -84,5 +88,16 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getRunesBySummonerId(region, summonerId, callback);
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getSummonerBySummonerId(region, summonerId, callback);
-- irelia.getNamesBySummonerIds(region, summonerIds[Array list], callback);
+- irelia.getSummonersBySummonerIds(region, summonerIds[Array list], callback);
 - irelia.getTeamsBySummonerId(region, summonerId, callback);
+
+### Stats
+
+- irelia.getRealms(region, callback);
+- irelia.getRunes(version, locale, callback);
+- irelia.getMasteries(version, locale, callback);
+- irelia.getItems(version, locale, callback);
+- irelia.getChampions(version, locale, callback);
+- irelia.getSummonerSpells(version, locale, callback);
+- irelia.getLanguage(version, locale, callback);
+
