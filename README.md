@@ -82,6 +82,8 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getChampions(region, freeToPlay[optional], callback);
 - irelia.getRecentGamesBySummonerId(region, summonerId, callback);
 - irelia.getLeagueBySummonerId(region, summonerId, callback);
+- irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
+- irelia.getChallengerLeagueByGametype(region, type[***example***'RANKED_SOLO_5X5'])
 - irelia.getSummaryStatsBySummonerId(region, summonerId, season [optional], callback);
 - irelia.getRankedStatsBySummonerId(region, summonerId, season [optional], callback);
 - irelia.getMasteriesBySummonerId(region, summonerId, callback);
@@ -97,7 +99,7 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getRunes(version, locale, callback);
 - irelia.getMasteries(version, locale, callback);
 - irelia.getItems(version, locale, callback);
-- irelia.getChampions(version, locale, callback);
+- irelia.getChampionsData(version, locale, callback);
 - irelia.getSummonerSpells(version, locale, callback);
 - irelia.getLanguage(version, locale, callback);
 

@@ -1,4 +1,5 @@
 var Lollib = require('./lib/main.js');
+var async = require('async');
 
 var lol = new Lollib({
 	secure: true,
@@ -15,19 +16,39 @@ var lol = new Lollib({
 });
 */
 
-lol.getChampions('euw', true, function (err, res) {
+lol.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
 
-	console.log(err, res);
+	console.log('Err:' + err, 'Players in Challenger queue: ' + res.entries.length);
 
 });
 
+lol.getChampions('euw', true, function (err, res) {
+
+	async.map(res.champions, function (champion, callback){
+
+		callback(null, champion.name)
+
+	}, function (err, champions){
+
+		console.log('Err:' + err,  'Free champions:' + champions.join(', '));
+
+	});
+
+});
+
+/*
 lol.getRecentGamesBySummonerId('euw', 33682129, function (err, res) {
+	
 	console.log(err, res);
+
 });
 
 lol.getSummaryStatsBySummonerId('euw', 33682129, function (err, res) {
+
 	console.log(err, res);
-});
+
+});*/
+
 /*
 console.log(lol.regions['euw']);
 console.log(lol.queues[2]);

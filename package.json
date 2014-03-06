@@ -10,7 +10,8 @@
   "main": "./lib/main.js",
   "dependencies": {
     "request": "*",
-    "colors": "*"
+    "colors": "*",
+    "async": "*"
   },
   "engines": {
     "node": "*"
