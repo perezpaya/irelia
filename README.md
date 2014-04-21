@@ -38,7 +38,7 @@ var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
 	host: 'prod.api.pvp.net',
-	path: '/api/lol/'
+	path: '/api/lol/',
 	key: 'your_key_goes_here',
 	debug: true
 });
