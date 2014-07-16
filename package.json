@@ -14,7 +14,7 @@
     "async": "*"
   },
   "engines": {
-    "node": "*"
+    "node": ">=0.10"
   },
   "scripts": {
     "test": "node test.js"
