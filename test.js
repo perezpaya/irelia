@@ -26,7 +26,7 @@ lol.getChampions('euw', true, function (err, res) {
 
 	async.map(res.champions, function (champion, callback){
 
-		callback(null, champion.name)
+		callback(null, champion.id)
 
 	}, function (err, champions){
 
