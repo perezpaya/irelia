@@ -2,6 +2,7 @@ Irelia
 ======
 
 ![Travis Status](https://api.travis-ci.org/alexperezpaya/irelia.png)
+
 ![NPM Download](https://nodei.co/npm/irelia.png?downloads=true)
 
 Irelia is a Node.js Wrapper that will allow you to start coding easily with the [League of Legends Oficial API](http://developer.riotgames.com).
