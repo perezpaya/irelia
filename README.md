@@ -1,15 +1,17 @@
 Irelia
 ======
 
-![Travis Status](https://api.travis-ci.org/alexperezpaya/irelia.png)
+[![Travis Status](https://api.travis-ci.org/alexperezpaya/irelia.png)](https://travis-ci.org/alexperezpaya/irelia)
 
-![NPM Download](https://nodei.co/npm/irelia.png?downloads=true)
+[![NPM Download](https://nodei.co/npm/irelia.png?downloads=true)](https://www.npmjs.org/package/irelia)
 
 Irelia is a Node.js Wrapper that will allow you to start coding easily with the [League of Legends Oficial API](http://developer.riotgames.com).
 
 Get your API Key at [http://developer.riotgames.com](http://developer.riotgames.com)
 
+
 There are API limits right now, so use the API with caching with Redis, Memcache, etc.
+
 
 ### Installation
 
