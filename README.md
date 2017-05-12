@@ -25,8 +25,8 @@ npm install irelia
 var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
-	host: 'prod.api.pvp.net',
-	path: '/api/lol/',
+	host: 'api.riotgames.com',
+	path: '/lol',
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -73,6 +73,7 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, summoner){
 - lol.queues[2] -> ***'Normal 5v5 Blind Pick'***
 - lol.gametypes['CUSTOM_GAME'] -> ***'Custom game'***
 - lol.gamemode['CLASSIC'] -> ***'Summoner's Rift/Twisted Treeline game'***
+- lol.regionCodes['euw'] -> ***'euw1'***
 
 ### Methods
 
@@ -84,18 +85,15 @@ irelia.getChampions('euw', true, function (err, champions){
 ```
 
 - irelia.getChampions(region, freeToPlay[optional], callback);
-- irelia.getRecentGamesBySummonerId(region, summonerId, callback);
+- irelia.getRecentGamesByAccountId(region, accountId, callback);
 - irelia.getLeagueBySummonerId(region, summonerId, callback);
+- irelia.getChampionMastery(region, summunerId, callback);
 - irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 - irelia.getChallengerLeagueByGametype(region, type[***example***'RANKED_SOLO_5X5'])
-- irelia.getSummaryStatsBySummonerId(region, summonerId, season [optional], callback);
-- irelia.getRankedStatsBySummonerId(region, summonerId, season [optional], callback);
 - irelia.getMasteriesBySummonerId(region, summonerId, callback);
 - irelia.getRunesBySummonerId(region, summonerId, callback);
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getSummonerBySummonerId(region, summonerId, callback);
-- irelia.getSummonersBySummonerIds(region, summonerIds[Array list], callback);
-- irelia.getTeamsBySummonerId(region, summonerId, callback);
 
 ### Stats
 
