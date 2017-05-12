@@ -1,4 +1,4 @@
-var Lollib = require('irelia');
+var Lollib = require('./lib/main.js');
 var async = require('async');
 
 var lol = new Lollib({
