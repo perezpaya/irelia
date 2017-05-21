@@ -26,7 +26,7 @@ var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
 	host: 'api.riotgames.com',
-	path: '/lol',
+	path: '/lol/',
 	key: 'your_key_goes_here',
 	debug: true
 });
