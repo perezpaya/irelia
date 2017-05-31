@@ -36,9 +36,7 @@ irelia.getChampions('euw', true, function (err, res) {
 
 var region = "tr";
 var callback = function (res,err) {
-	if (err) {
-		console.log("err at: " + res);
-	}
+	console.log("called");
 };
 var accountId = 207144678;
 var summonerId = 11806239;
