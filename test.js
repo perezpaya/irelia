@@ -1,7 +1,7 @@
 var Lollib = require('./lib/main.js');
 var async = require('async');
 
-var lol = new Lollib({
+var irelia = new Lollib({
 	secure: true,
 	host: 'api.riotgames.com',
 	path: '/lol/',
@@ -14,13 +14,13 @@ var lol = new Lollib({
 });
 */
 
-lol.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
+irelia.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
 
 	console.log('Err:' + err, 'Players in Challenger queue: ' + res.entries.length);
 
 });
 
-lol.getChampions('euw', true, function (err, res) {
+irelia.getChampions('euw', true, function (err, res) {
 
 	async.map(res.champions, function (champion, callback){
 
