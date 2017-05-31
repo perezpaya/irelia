@@ -94,6 +94,12 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getRunesBySummonerId(region, summonerId, callback);
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getSummonerBySummonerId(region, summonerId, callback);
+- irelia.getStatus(region, callback);
+- irelia.getRecentMatchesByAccountId(region, accountId, callback);
+- irelia.getRecentMatchesByAccountId(region, accountId, callback);
+- irelia.getMatchByMatchId(region, matchId, callback);
+- irelia.getAllMasteries(region, summonerId, callback);
+- irelia.getTotalChampionMasteries(region, summonerId, callback);
 
 ### Stats
 
