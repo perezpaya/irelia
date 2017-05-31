@@ -46,19 +46,13 @@ var name = "poizonemd"
 var matchId = 554610172;
 var championId = 12; //Alistar
 
+
 irelia.getChampions(region, true, callback);
 irelia.getRecentGamesByAccountId(region, accountId, callback);
-irelia.getLeagueBySummonerId(region, summonerId, callback);
 irelia.getChampionMastery(region, summonerId, championId, callback);
 irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
-irelia.getChallengerLeagueByGametype(region, 'RANKED_SOLO_5x5');
-irelia.getMasteriesBySummonerId(region, summonerId, callback);
-irelia.getRunesBySummonerId(region, summonerId, callback);
 irelia.getSummonerByName(region, name, callback);
-irelia.getSummonerBySummonerId(region, summonerId, callback);
 irelia.getStatus(region, callback);
-irelia.getRecentMatchesByAccountId(region, accountId, callback);
-irelia.getRecentMatchesByAccountId(region, accountId, callback);
 irelia.getMatchByMatchId(region, matchId, callback);
 irelia.getAllMasteries(region, summonerId, callback);
 irelia.getTotalChampionMasteries(region, summonerId, callback);
