@@ -41,8 +41,8 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
-	host: 'prod.api.pvp.net',
-	path: '/api/lol/',
+	host: 'api.riotgames.com',
+	path: '/lol/',
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -87,13 +87,19 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getChampions(region, freeToPlay[optional], callback);
 - irelia.getRecentGamesByAccountId(region, accountId, callback);
 - irelia.getLeagueBySummonerId(region, summonerId, callback);
-- irelia.getChampionMastery(region, summunerId, callback);
+- irelia.getChampionMastery(region, summonerId, championId, callback);
 - irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 - irelia.getChallengerLeagueByGametype(region, type[***example***'RANKED_SOLO_5X5'])
 - irelia.getMasteriesBySummonerId(region, summonerId, callback);
 - irelia.getRunesBySummonerId(region, summonerId, callback);
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getSummonerBySummonerId(region, summonerId, callback);
+- irelia.getStatus(region, callback);
+- irelia.getRecentMatchesByAccountId(region, accountId, callback);
+- irelia.getRecentMatchesByAccountId(region, accountId, callback);
+- irelia.getMatchByMatchId(region, matchId, callback);
+- irelia.getAllMasteries(region, summonerId, callback);
+- irelia.getTotalChampionMasteries(region, summonerId, callback);
 
 ### Stats
 
