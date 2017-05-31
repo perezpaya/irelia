@@ -33,3 +33,20 @@ lol.getChampions('euw', true, function (err, res) {
 	});
 
 });
+
+irelia.getChampions(region, freeToPlay[optional], callback);
+irelia.getRecentGamesByAccountId(region, accountId, callback);
+irelia.getLeagueBySummonerId(region, summonerId, callback);
+irelia.getChampionMastery(region, summonerId, championId, callback);
+irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
+irelia.getChallengerLeagueByGametype(region, type[example'RANKED_SOLO_5X5'])
+irelia.getMasteriesBySummonerId(region, summonerId, callback);
+irelia.getRunesBySummonerId(region, summonerId, callback);
+irelia.getSummonerByName(region, name, callback);
+irelia.getSummonerBySummonerId(region, summonerId, callback);
+irelia.getStatus(region, callback);
+irelia.getRecentMatchesByAccountId(region, accountId, callback);
+irelia.getRecentMatchesByAccountId(region, accountId, callback);
+irelia.getMatchByMatchId(region, matchId, callback);
+irelia.getAllMasteries(region, summonerId, callback);
+irelia.getTotalChampionMasteries(region, summonerId, callback);
