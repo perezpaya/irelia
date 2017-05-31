@@ -54,5 +54,4 @@ irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 irelia.getSummonerByName(region, name, callback);
 irelia.getStatus(region, callback);
 irelia.getMatchByMatchId(region, matchId, callback);
-irelia.getAllMasteries(region, summonerId, callback);
 irelia.getTotalChampionMasteries(region, summonerId, callback);
