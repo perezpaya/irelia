@@ -35,7 +35,11 @@ irelia.getChampions('euw', true, function (err, res) {
 });
 
 var region = "tr";
-var callback = function (res,err) {};
+var callback = function (res,err) {
+	if (err) {
+		console.log("err at: " + res);
+	}
+};
 var accountId = 207144678;
 var summonerId = 11806239;
 var name = "poizonemd"
@@ -47,7 +51,7 @@ irelia.getRecentGamesByAccountId(region, accountId, callback);
 irelia.getLeagueBySummonerId(region, summonerId, callback);
 irelia.getChampionMastery(region, summonerId, championId, callback);
 irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
-irelia.getChallengerLeagueByGametype(region, 'RANKED_SOLO_5X5');
+irelia.getChallengerLeagueByGametype(region, 'RANKED_SOLO_5x5');
 irelia.getMasteriesBySummonerId(region, summonerId, callback);
 irelia.getRunesBySummonerId(region, summonerId, callback);
 irelia.getSummonerByName(region, name, callback);
