@@ -40,6 +40,7 @@ var accountId = 207144678;
 var summonerId = 11806239;
 var name = "poizonemd"
 var matchId = 554610172;
+var championId = 12; //Alistar
 
 irelia.getChampions(region, true, callback);
 irelia.getRecentGamesByAccountId(region, accountId, callback);
