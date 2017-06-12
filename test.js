@@ -1,12 +1,12 @@
-var Lollib = require('irelia');
+var Lollib = require('./lib/main.js');
 var async = require('async');
 
-var irelia = new Lollib({
+var lol = new Lollib({
 	secure: true,
 	host: 'api.riotgames.com',
-	path: '/lol/',
+	path: '/lol',
 	key: 'ddad33ef-e7a4-4d99-8af8-aa8bf5260db0', // TEST API KEY -> Better get your own cause if not rate limit will be exceeded all time
-	debug: false
+	debug: true
 });
 
 /*lol.getSummonerByName('euw', 'NSZombie', function (err, res){
@@ -14,13 +14,13 @@ var irelia = new Lollib({
 });
 */
 
-irelia.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
+lol.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
 
 	console.log('Err:' + err, 'Players in Challenger queue: ' + res.entries.length);
 
 });
 
-irelia.getChampions('euw', true, function (err, res) {
+lol.getChampions('euw', true, function (err, res) {
 
 	async.map(res.champions, function (champion, callback){
 
@@ -33,6 +33,7 @@ irelia.getChampions('euw', true, function (err, res) {
 	});
 
 });
+<<<<<<< HEAD
 
 var region = "tr";
 <<<<<<< HEAD
@@ -61,3 +62,5 @@ irelia.getTotalChampionMasteries(region, summonerId, callback);
 =======
 irelia.getTotalChampionMasteries(region, summonerId, callback);
 >>>>>>> origin/master
+=======
+>>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
