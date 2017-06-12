@@ -3,8 +3,6 @@ var async = require('async');
 
 var lol = new Lollib({
 	secure: true,
-	host: 'api.riotgames.com',
-	path: '/lol',
 	key: 'ddad33ef-e7a4-4d99-8af8-aa8bf5260db0', // TEST API KEY -> Better get your own cause if not rate limit will be exceeded all time
 	debug: true
 });
@@ -33,17 +31,11 @@ lol.getChampions('euw', true, function (err, res) {
 	});
 
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 var region = "tr";
-<<<<<<< HEAD
 var callback = function (res,err) {};
-=======
 var callback = function (res,err) {
 	console.log("called");
 };
->>>>>>> origin/master
 var accountId = 207144678;
 var summonerId = 11806239;
 var name = "poizonemd"
@@ -58,12 +50,5 @@ irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 irelia.getSummonerByName(region, name, callback);
 irelia.getStatus(region, callback);
 irelia.getMatchByMatchId(region, matchId, callback);
-<<<<<<< HEAD
 irelia.getTotalChampionMasteries(region, summonerId, callback);
-=======
 irelia.getTotalChampionMasteries(region, summonerId, callback);
->>>>>>> origin/master
-=======
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
-=======
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
