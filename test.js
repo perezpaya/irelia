@@ -1,12 +1,12 @@
-var Lollib = require('./lib/main.js');
+var Lollib = require('irelia');
 var async = require('async');
 
-var lol = new Lollib({
+var irelia = new Lollib({
 	secure: true,
 	host: 'api.riotgames.com',
-	path: '/lol',
+	path: '/lol/',
 	key: 'ddad33ef-e7a4-4d99-8af8-aa8bf5260db0', // TEST API KEY -> Better get your own cause if not rate limit will be exceeded all time
-	debug: true
+	debug: false
 });
 
 /*lol.getSummonerByName('euw', 'NSZombie', function (err, res){
@@ -14,13 +14,13 @@ var lol = new Lollib({
 });
 */
 
-lol.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
+irelia.getChallengerLeagueByGametype('euw', 'RANKED_SOLO_5x5', function (err, res){
 
 	console.log('Err:' + err, 'Players in Challenger queue: ' + res.entries.length);
 
 });
 
-lol.getChampions('euw', true, function (err, res) {
+irelia.getChampions('euw', true, function (err, res) {
 
 	async.map(res.champions, function (champion, callback){
 
@@ -33,3 +33,21 @@ lol.getChampions('euw', true, function (err, res) {
 	});
 
 });
+
+var region = "tr";
+var callback = function (res,err) {};
+var accountId = 207144678;
+var summonerId = 11806239;
+var name = "poizonemd"
+var matchId = 554610172;
+var championId = 12; //Alistar
+
+
+irelia.getChampions(region, true, callback);
+irelia.getRecentGamesByAccountId(region, accountId, callback);
+irelia.getChampionMastery(region, summonerId, championId, callback);
+irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
+irelia.getSummonerByName(region, name, callback);
+irelia.getStatus(region, callback);
+irelia.getMatchByMatchId(region, matchId, callback);
+irelia.getTotalChampionMasteries(region, summonerId, callback);
