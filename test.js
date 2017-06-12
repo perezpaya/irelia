@@ -34,6 +34,7 @@ lol.getChampions('euw', true, function (err, res) {
 
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 var region = "tr";
 <<<<<<< HEAD
@@ -62,5 +63,7 @@ irelia.getTotalChampionMasteries(region, summonerId, callback);
 =======
 irelia.getTotalChampionMasteries(region, summonerId, callback);
 >>>>>>> origin/master
+=======
+>>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
 =======
 >>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
