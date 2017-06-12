@@ -35,7 +35,13 @@ irelia.getChampions('euw', true, function (err, res) {
 });
 
 var region = "tr";
+<<<<<<< HEAD
 var callback = function (res,err) {};
+=======
+var callback = function (res,err) {
+	console.log("called");
+};
+>>>>>>> origin/master
 var accountId = 207144678;
 var summonerId = 11806239;
 var name = "poizonemd"
@@ -50,4 +56,8 @@ irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 irelia.getSummonerByName(region, name, callback);
 irelia.getStatus(region, callback);
 irelia.getMatchByMatchId(region, matchId, callback);
+<<<<<<< HEAD
 irelia.getTotalChampionMasteries(region, summonerId, callback);
+=======
+irelia.getTotalChampionMasteries(region, summonerId, callback);
+>>>>>>> origin/master
