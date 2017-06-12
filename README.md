@@ -25,21 +25,8 @@ npm install irelia
 var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	host: 'api.riotgames.com',
-	path: '/lol/',
->>>>>>> origin/master
-=======
 	host: 'api.riotgames.com',
 	path: '/lol',
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
-=======
-	host: 'api.riotgames.com',
-	path: '/lol',
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -54,21 +41,6 @@ irelia.getSummonerByName('euw', 'NSZombie', function (err, res){
 var Irelia = require('irelia');
 var irelia = new Irelia({
 	secure: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	host: 'api.riotgames.com',
-	path: '/lol/',
->>>>>>> origin/master
-=======
-	host: 'prod.api.pvp.net',
-	path: '/api/lol/',
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
-=======
-	host: 'prod.api.pvp.net',
-	path: '/api/lol/',
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
 	key: 'your_key_goes_here',
 	debug: true
 });
@@ -113,27 +85,15 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getChampions(region, freeToPlay[optional], callback);
 - irelia.getRecentGamesByAccountId(region, accountId, callback);
 - irelia.getLeagueBySummonerId(region, summonerId, callback);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 - irelia.getChampionMastery(region, summonerId, championId, callback);
->>>>>>> origin/master
-=======
 - irelia.getChampionMastery(region, summunerId, callback);
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
-=======
 - irelia.getChampionMastery(region, summunerId, callback);
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
 - irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
 - irelia.getChallengerLeagueByGametype(region, type[***example***'RANKED_SOLO_5X5'])
 - irelia.getMasteriesBySummonerId(region, summonerId, callback);
 - irelia.getRunesBySummonerId(region, summonerId, callback);
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getSummonerBySummonerId(region, summonerId, callback);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 - irelia.getSummonersBySummonerIds(region, summonerIds[Array list], callback);
 - irelia.getTeamsBySummonerId(region, summonerId, callback);
 - irelia.getChampions(region, true, callback);
@@ -143,18 +103,12 @@ irelia.getChampions('euw', true, function (err, champions){
 - irelia.getSummonerByName(region, name, callback);
 - irelia.getStatus(region, callback);
 - irelia.getMatchByMatchId(region, matchId, callback);
-=======
 - irelia.getStatus(region, callback);
 - irelia.getRecentMatchesByAccountId(region, accountId, callback);
 - irelia.getRecentMatchesByAccountId(region, accountId, callback);
 - irelia.getMatchByMatchId(region, matchId, callback);
 - irelia.getAllMasteries(region, summonerId, callback);
->>>>>>> origin/master
 - irelia.getTotalChampionMasteries(region, summonerId, callback);
-=======
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
-=======
->>>>>>> parent of be04f3e... Status, Match, Champion Mastery v3 API
 
 ### Stats
 
