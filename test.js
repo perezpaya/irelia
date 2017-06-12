@@ -51,4 +51,3 @@ lol.getSummonerByName(region, name, callback);
 lol.getStatus(region, callback);
 lol.getMatchByMatchId(region, matchId, callback);
 lol.getTotalChampionMasteries(region, summonerId, callback);
-lol.getTotalChampionMasteries(region, summonerId, callback);
