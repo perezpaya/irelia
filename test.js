@@ -43,12 +43,12 @@ var matchId = 554610172;
 var championId = 12; //Alistar
 
 
-irelia.getChampions(region, true, callback);
-irelia.getRecentGamesByAccountId(region, accountId, callback);
-irelia.getChampionMastery(region, summonerId, championId, callback);
-irelia.getLeagueEntryBySummonerId(region, summonerId, callback);
-irelia.getSummonerByName(region, name, callback);
-irelia.getStatus(region, callback);
-irelia.getMatchByMatchId(region, matchId, callback);
-irelia.getTotalChampionMasteries(region, summonerId, callback);
-irelia.getTotalChampionMasteries(region, summonerId, callback);
+lol.getChampions(region, true, callback);
+lol.getRecentGamesByAccountId(region, accountId, callback);
+lol.getChampionMastery(region, summonerId, championId, callback);
+lol.getLeagueEntryBySummonerId(region, summonerId, callback);
+lol.getSummonerByName(region, name, callback);
+lol.getStatus(region, callback);
+lol.getMatchByMatchId(region, matchId, callback);
+lol.getTotalChampionMasteries(region, summonerId, callback);
+lol.getTotalChampionMasteries(region, summonerId, callback);
